@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  lb:
+    image: haproxy
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+  nestapp1:
+    image: nestapp02
+    environment:
+      - APPID=1111
+
+  nestapp2:
+    image: nestapp02
+    environment:
+      - APPID=2222
+
+  nestapp3:
+    image: nestapp02
+    environment:
+      - APPID=3333
