@@ -8,16 +8,16 @@ services:
     volumes:
       - ./haproxy:/usr/local/etc/haproxy
   nestapp1:
-    image: nestapp02
+    image: nest_app
     environment:
       - APPID=1111
 
   nestapp2:
-    image: nestapp02
+    image: nest_app
     environment:
       - APPID=2222
 
   nestapp3:
-    image: nestapp02
+    image: nest_app
     environment:
       - APPID=3333
